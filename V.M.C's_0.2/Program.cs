@@ -11,6 +11,7 @@ namespace V.M.C_s_0._2
         static float score = 0;
         static float currentScore;
         static float currentMult = 1;
+
         static ConsoleColor OriginalColor;
         static ConsoleColor TextColor = ConsoleColor.DarkMagenta;
         static ConsoleColor HUDColor = ConsoleColor.DarkGreen;
@@ -57,36 +58,44 @@ namespace V.M.C_s_0._2
                 scoreEarned *= currentMult;
             }
             currentScore += scoreEarned;
+
             Console.WriteLine("===================");
             Console.WriteLine("Score Was Earned! - " + scoreEarned);
             Console.WriteLine("===================");
+
             Console.ForegroundColor = TextColor;
         }
         static void ScoreMultipliyer(float scoreMult)
         {
             Console.ForegroundColor = MultColor;
             currentMult += scoreMult;
+
             Console.WriteLine("++++++++++++++++++");
             Console.WriteLine("Score Multipiler Went Up! - " + scoreMult);
             Console.WriteLine("++++++++++++++++++");
+
             Console.ForegroundColor = TextColor;
         }
         static void ScoreDeMultipliyer(float scoreMult)
         {
             Console.ForegroundColor = MultColor;
             currentMult -= scoreMult;
+
             Console.WriteLine("-----------------");
             Console.WriteLine("Score Multiplier Went Down! - " + scoreMult);
             Console.WriteLine("-----------------");
+
             Console.ForegroundColor = TextColor;
         }
         static void ShowHUD()
         {
             Console.ForegroundColor = HUDColor;
+
             Console.WriteLine("===================");
             Console.WriteLine("Score - " + currentScore);
             Console.WriteLine("Score Multiplier - " + currentMult);
             Console.WriteLine("===================");
+
             Console.ForegroundColor = TextColor;
         }
     }
