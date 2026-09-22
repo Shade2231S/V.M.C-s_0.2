@@ -21,7 +21,9 @@ namespace V.M.C_s_0._2
         {
             Console.ForegroundColor = TextColor;
             score = currentScore;           
+
             ShowHUD();
+            Console.WriteLine("Press any key to Start");
             Console.ReadKey(true);
             Console.Clear();
             AddScore(10);
@@ -53,6 +55,7 @@ namespace V.M.C_s_0._2
         static void AddScore(float scoreEarned)
         {
             Console.ForegroundColor = ScoreColor;
+
             if (currentMult > 0)
             {
                 scoreEarned *= currentMult;
@@ -76,7 +79,7 @@ namespace V.M.C_s_0._2
 
             Console.ForegroundColor = TextColor;
         }
-        static void ScoreDeMultipliyer(float scoreMult)
+        static void ScoreDe_Multipliyer(float scoreMult)
         {
             Console.ForegroundColor = MultColor;
             currentMult -= scoreMult;
